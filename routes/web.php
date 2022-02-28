@@ -47,10 +47,10 @@ Route::get('/products', function (){
     return view('/products');
 });
 
-Route::get('/product', [ProductController::class, 'index']);
-Route::get('/product/{product}', [ProductController::class, 'show']);
+Route::controller(ProductController::class)->group(function ($product) {
+    Route::get('/product', 'index');
+    Route::get('/product/{product}', 'show');
+});
+
 
 Route::get('/category/{category}', [CategoryController::class, 'show']);
-
-
-
