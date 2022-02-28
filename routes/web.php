@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/admin-list', function () {
-    return view('/admin-list'); // nom de la vue présent dans l'URL
+    return view('/admin-list'); // le nom de la vue doit correspondre
 });
 
 Route::get('cart', function(){
@@ -41,9 +42,7 @@ Route::get('/index', function (){
     return view('/index');
 });
 
-Route::get('/product', function (){
-    return view('/product');
-});
+Route::get('/product', [ProductController::class, 'index']);
 
 Route::get('/products', function (){
     return view('/products');
