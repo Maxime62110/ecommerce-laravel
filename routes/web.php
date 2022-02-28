@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () { créé de base
+   // return view('welcome');
+//});
 
 Route::get('/admin-list', function () {
     return view('/admin-list'); // nom de la vue présent dans l'URL
