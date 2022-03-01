@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+// Permet de générer des données pour ma base rapidement
+
 class DatabaseSeeder extends Seeder
 {
     /**
